@@ -17,6 +17,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
+
       appBar: isSmallScreen(context) ? AppBar() : null,
       drawer: isSmallScreen(context)
           ? Drawer(

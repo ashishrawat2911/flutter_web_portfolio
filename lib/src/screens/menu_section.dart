@@ -14,7 +14,7 @@ class _MenuSectionState extends State<MenuSection> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      color: Colors.blue,
       child: Column(
         children: <Widget>[
           ListTile(

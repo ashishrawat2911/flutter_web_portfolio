@@ -2,7 +2,6 @@ import 'dart:html' as html;
 
 import 'package:flutter_web/material.dart';
 import 'package:flutter_web_portfolio/models/blog_model.dart';
-
 import 'package:flutter_web_portfolio/src/widgets/autosize_text.dart';
 
 class Blogs extends StatefulWidget {
@@ -55,9 +54,11 @@ class _BlogsState extends State<Blogs> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Container(
-                            width: displaySize.width / 3,
+                            width: displaySize.width / 2,
                             child: AutoSizeText(
                               blogList[index].name,
+                              maxLines: 2,
+                              overflow: TextOverflow.clip,
                               style: TextStyle(fontSize: 20),
                             ),
                           ),
