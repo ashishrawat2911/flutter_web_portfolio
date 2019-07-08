@@ -3,7 +3,7 @@ import 'dart:html' as html;
 import 'package:flutter_web/material.dart';
 import 'package:flutter_web_portfolio/models/blog_model.dart';
 
-import '../../autosize_text.dart';
+import 'package:flutter_web_portfolio/src/widgets/autosize_text.dart';
 
 class Blogs extends StatefulWidget {
   @override

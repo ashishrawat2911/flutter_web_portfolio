@@ -1,3 +1,5 @@
+//imported from https://github.com/leisim/auto_size_text/tree/master/lib/src  by Simon Leier
+
 import 'dart:async';
 
 import 'package:flutter_web/material.dart';

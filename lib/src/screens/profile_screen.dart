@@ -1,6 +1,6 @@
 import 'package:flutter_web/material.dart';
 
-import '../../autosize_text.dart';
+import 'package:flutter_web_portfolio/src/widgets/autosize_text.dart';
 import '../../main.dart';
 import 'home_screen.dart';
 

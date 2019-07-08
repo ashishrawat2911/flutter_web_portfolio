@@ -1,9 +1,11 @@
 import 'dart:convert';
-import 'package:flutter_web_portfolio/html/image_properties.dart';
+
 import 'package:flutter_web/gestures.dart';
 import 'package:flutter_web/material.dart';
 import 'package:html/dom.dart' as dom;
 import 'package:html/parser.dart' as parser;
+
+import 'image_properties.dart';
 
 typedef CustomRender = Widget Function(dom.Node node, List<Widget> children);
 typedef CustomTextStyle = TextStyle Function(

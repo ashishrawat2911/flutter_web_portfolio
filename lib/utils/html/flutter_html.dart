@@ -1,6 +1,7 @@
 import 'package:flutter_web/material.dart';
-import 'package:flutter_web_portfolio/html/html_parser.dart';
-import 'package:flutter_web_portfolio/html/image_properties.dart';
+import 'package:flutter_web_portfolio/utils/html/image_properties.dart';
+
+import 'html_parser.dart';
 
 class Html extends StatelessWidget {
   Html({
