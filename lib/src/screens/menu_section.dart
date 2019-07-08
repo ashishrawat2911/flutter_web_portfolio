@@ -25,7 +25,10 @@ class _MenuSectionState extends State<MenuSection> {
                 color: Colors.white,
               ),
             ),
-            leading: Icon(Icons.person),
+            leading: Icon(
+              Icons.person,
+              color: Colors.white,
+            ),
             onTap: () {
               navigationDrawerBloc.updateNavigation(NavigationScreen.Profile);
               if (widget.scaffoldKey.currentState.isDrawerOpen) {
@@ -41,7 +44,17 @@ class _MenuSectionState extends State<MenuSection> {
                 color: Colors.white,
               ),
             ),
-            leading: Icon(Icons.person),
+            onTap: () {
+              navigationDrawerBloc
+                  .updateNavigation(NavigationScreen.PersonalProject);
+              if (widget.scaffoldKey.currentState.isDrawerOpen) {
+                Navigator.of(context).pop();
+              }
+            },
+            leading: Icon(
+              Icons.assignment_ind,
+              color: Colors.white,
+            ),
           ),
           ListTile(
             title: Text(
@@ -51,9 +64,31 @@ class _MenuSectionState extends State<MenuSection> {
                 color: Colors.white,
               ),
             ),
-            leading: Icon(Icons.person),
+            leading: Icon(
+              Icons.mode_edit,
+              color: Colors.white,
+            ),
             onTap: () {
               navigationDrawerBloc.updateNavigation(NavigationScreen.Blog);
+              if (widget.scaffoldKey.currentState.isDrawerOpen) {
+                Navigator.of(context).pop();
+              }
+            },
+          ),
+          ListTile(
+            title: Text(
+              "Talks",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+            leading: Icon(
+              Icons.mic,
+              color: Colors.white,
+            ),
+            onTap: () {
+              navigationDrawerBloc.updateNavigation(NavigationScreen.Talks);
               if (widget.scaffoldKey.currentState.isDrawerOpen) {
                 Navigator.of(context).pop();
               }

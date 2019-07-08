@@ -4,6 +4,8 @@ import 'package:flutter_web/material.dart';
 import 'package:flutter_web_portfolio/models/blog_model.dart';
 import 'package:flutter_web_portfolio/src/widgets/autosize_text.dart';
 
+import 'home_screen.dart';
+
 class Blogs extends StatefulWidget {
   @override
   _BlogsState createState() => _BlogsState();
@@ -28,9 +30,14 @@ class _BlogsState extends State<Blogs> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          AutoSizeText(
-            "Blogs by Ashish rawat",
-            style: TextStyle(fontSize: 40),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: isSmallScreen(context)
+                ? Container()
+                : AutoSizeText(
+                    "Blogs by Ashish Rawat",
+                    style: TextStyle(fontSize: 40),
+                  ),
           ),
           GridView.count(
             physics: NeverScrollableScrollPhysics(),
@@ -90,28 +97,83 @@ class _BlogsState extends State<Blogs> {
         "https://miro.medium.com/max/700/1*d7_x3XnsC6FJXNHNx_seQg.png",
         "https://medium.com/flutterdevs/using-sharedpreferences-in-flutter-251755f07127"));
     blogList.add(
-      BlogModel("", "", ""),
+      BlogModel(
+          "Managing the state of a Widget using bloc | Flutter",
+          "https://cdn-images-1.medium.com/max/800/1*_zYRS_PltGA2o-2Rtd5fYQ.png",
+          "https://medium.com/flutterdevs/managing-the-state-of-a-widget-using-bloc-flutter-7789d6017f6b"),
     );
     blogList.add(
-      BlogModel("", "", ""),
+      BlogModel(
+          "Using MVVM |Android Jetpack",
+          "https://cdn-images-1.medium.com/max/1200/1*4KTWMiUwN1GAhhT27V7pjw.png",
+          "https://medium.com/mindorks/using-mvvm-android-jetpack-ebf1d9c1477c"),
     );
     blogList.add(
-      BlogModel("", "", ""),
+      BlogModel(
+          "Data Persistence with SQLite | Flutter",
+          "https://cdn-images-1.medium.com/max/800/1*GjB48IWvbZfELLSog7zrpA.png",
+          "https://medium.com/flutterdevs/data-persistence-with-sqlite-flutter-47a6f67b973f"),
     );
     blogList.add(
-      BlogModel("", "", ""),
+      BlogModel(
+          "Using ViewModel with RoomDatabase | Android Jetpack",
+          "https://cdn-images-1.medium.com/max/1200/1*NAz43gf-zEaIzGO4XAmLjA.png",
+          "https://medium.com/mindorks/using-view-model-with-roomdatabase-95b790a9a66c"),
     );
     blogList.add(
-      BlogModel("", "", ""),
+      BlogModel(
+          "Using Room Database with LiveData | Android Jetpack",
+          "https://cdn-images-1.medium.com/max/800/1*YKfnrFdzXMgh6vv4heiGgA.png",
+          "https://medium.com/mindorks/using-room-database-with-livedata-android-jetpack-cbf89b677b47"),
     );
     blogList.add(
-      BlogModel("", "", ""),
+      BlogModel(
+        "Using Room Database | Android Jetpack",
+        "https://cdn-images-1.medium.com/max/800/1*-OboqZDfl9-XTT8XA-b0cA.png",
+        "https://medium.com/mindorks/using-room-database-android-jetpack-675a89a0e942",
+      ),
     );
     blogList.add(
-      BlogModel("", "", ""),
+      BlogModel(
+        "Know Your Widgets: Container in Flutter",
+        "https://cdn-images-1.medium.com/max/800/1*uzX1HGrng58Oa4geMAcuEw.png",
+        "https://medium.com/flutterdevs/know-your-widgets-container-in-flutter-330983df34d3",
+      ),
     );
     blogList.add(
-      BlogModel("", "", ""),
+      BlogModel(
+        "Cupertino (iOS-style) ActionSheet in Flutter | Know Your Widgets",
+        "https://cdn-images-1.medium.com/max/800/1*4vcXR_1bBiXc_bmiri4g5Q.png",
+        "https://medium.com/flutterdevs/know-your-widgets-1-cupertino-ios-style-actionsheet-in-flutter-e6d7d8dfb437",
+      ),
+    );
+    blogList.add(
+      BlogModel(
+        "Creating a Flutter Plugin | Dialog Box",
+        "https://cdn-images-1.medium.com/max/800/1*WtVPadgL5LWq-YnUT0cXNQ.png",
+        "https://medium.com/flutter-community/creating-a-flutter-plugin-dialog-box-78adbff15fe",
+      ),
+    );
+    blogList.add(
+      BlogModel(
+        "Parsing JSON in Flutter",
+        "https://cdn-images-1.medium.com/max/800/1*1X1WfrlV2yaEXbvV1BJEXg.png",
+        "https://medium.com/flutterdevs/parsing-complex-json-in-flutter-b7f991611d3e",
+      ),
+    );
+    blogList.add(
+      BlogModel(
+        "Using ViewModel | Android Jetpack",
+        "https://cdn-images-1.medium.com/max/1200/1*sgte14nnEGB1cwlDbjbBrw.png",
+        "https://android.jlelse.eu/using-viewmodel-android-jetpack-2a6325c79c59",
+      ),
+    );
+    blogList.add(
+      BlogModel(
+        "Navigation Drawer using Flutter",
+        "https://cdn-images-1.medium.com/max/800/1*NeUg-w9N1Y8361YoJgPqow.png",
+        "https://medium.com/flutterpub/navigation-drawer-using-flutter-cc8a5cfcab90",
+      ),
     );
   }
 }

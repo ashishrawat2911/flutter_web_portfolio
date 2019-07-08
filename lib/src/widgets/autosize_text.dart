@@ -16,53 +16,53 @@ class AutoSizeText extends StatefulWidget {
   /// If the [style] argument is null, the text will use the style from the
   /// closest enclosing [DefaultTextStyle].
   const AutoSizeText(
-      this.data, {
-        Key key,
-        this.style,
-        this.strutStyle,
-        this.minFontSize = 12,
-        this.maxFontSize = double.infinity,
-        this.stepGranularity = 1,
-        this.presetFontSizes,
-        this.group,
-        this.textAlign,
-        this.textDirection,
-        this.locale,
-        this.softWrap,
-        this.wrapWords = true,
-        this.overflow,
-        this.overflowReplacement,
-        this.textScaleFactor,
-        this.maxLines,
-        this.semanticsLabel,
-      })  : assert(data != null,
-  'A non-null String must be provided to a AutoSizeText widget.'),
+    this.data, {
+    Key key,
+    this.style,
+    this.strutStyle,
+    this.minFontSize = 12,
+    this.maxFontSize = double.infinity,
+    this.stepGranularity = 1,
+    this.presetFontSizes,
+    this.group,
+    this.textAlign,
+    this.textDirection,
+    this.locale,
+    this.softWrap,
+    this.wrapWords = true,
+    this.overflow,
+    this.overflowReplacement,
+    this.textScaleFactor,
+    this.maxLines,
+    this.semanticsLabel,
+  })  : assert(data != null,
+            'A non-null String must be provided to a AutoSizeText widget.'),
         textSpan = null,
         super(key: key);
 
   /// Creates a [AutoSizeText] widget with a [TextSpan].
   const AutoSizeText.rich(
-      this.textSpan, {
-        Key key,
-        this.style,
-        this.strutStyle,
-        this.minFontSize = 12,
-        this.maxFontSize = double.infinity,
-        this.stepGranularity = 1,
-        this.presetFontSizes,
-        this.group,
-        this.textAlign,
-        this.textDirection,
-        this.locale,
-        this.softWrap,
-        this.wrapWords = true,
-        this.overflow,
-        this.overflowReplacement,
-        this.textScaleFactor,
-        this.maxLines,
-        this.semanticsLabel,
-      })  : assert(textSpan != null,
-  'A non-null TextSpan must be provided to a AutoSizeText.rich widget.'),
+    this.textSpan, {
+    Key key,
+    this.style,
+    this.strutStyle,
+    this.minFontSize = 12,
+    this.maxFontSize = double.infinity,
+    this.stepGranularity = 1,
+    this.presetFontSizes,
+    this.group,
+    this.textAlign,
+    this.textDirection,
+    this.locale,
+    this.softWrap,
+    this.wrapWords = true,
+    this.overflow,
+    this.overflowReplacement,
+    this.textScaleFactor,
+    this.maxLines,
+    this.semanticsLabel,
+  })  : assert(textSpan != null,
+            'A non-null TextSpan must be provided to a AutoSizeText.rich widget.'),
         data = null,
         super(key: key);
 
@@ -280,27 +280,27 @@ class _AutoSizeTextState extends State<AutoSizeText> {
 
   void _sanityCheck(TextStyle style, int maxLines) {
     assert(widget.overflow == null || widget.overflowReplacement == null,
-    'Either overflow or overflowReplacement have to be null.');
+        'Either overflow or overflowReplacement have to be null.');
     assert(maxLines == null || maxLines > 0,
-    "MaxLines has to be grater than or equal to 1.");
+        "MaxLines has to be grater than or equal to 1.");
 
     if (widget.presetFontSizes == null) {
       assert(widget.stepGranularity >= 0.1,
-      'StepGranularity has to be greater than or equal to 0.1. It is not a good idea to resize the font with a higher accuracy.');
+          'StepGranularity has to be greater than or equal to 0.1. It is not a good idea to resize the font with a higher accuracy.');
       assert(widget.minFontSize >= 0,
-      "MinFontSize has to be greater than or equal to 0.");
+          "MinFontSize has to be greater than or equal to 0.");
       assert(widget.maxFontSize > 0, "MaxFontSize has to be greater than 0.");
       assert(widget.minFontSize <= widget.maxFontSize,
-      "MinFontSize has to be smaller or equal than maxFontSize.");
+          "MinFontSize has to be smaller or equal than maxFontSize.");
       assert(widget.minFontSize / widget.stepGranularity % 1 == 0,
-      "MinFontSize has to be multiples of stepGranularity.");
+          "MinFontSize has to be multiples of stepGranularity.");
       if (widget.maxFontSize != double.infinity) {
         assert(widget.maxFontSize / widget.stepGranularity % 1 == 0,
-        "MaxFontSize has to be multiples of stepGranularity.");
+            "MaxFontSize has to be multiples of stepGranularity.");
       }
     } else {
       assert(widget.presetFontSizes.isNotEmpty,
-      "PresetFontSizes has to be nonempty.");
+          "PresetFontSizes has to be nonempty.");
     }
   }
 
@@ -321,7 +321,7 @@ class _AutoSizeTextState extends State<AutoSizeText> {
     var presetFontSizes = widget.presetFontSizes?.reversed?.toList();
     if (presetFontSizes == null) {
       var defaultFontSize =
-      style.fontSize.clamp(widget.minFontSize, widget.maxFontSize);
+          style.fontSize.clamp(widget.minFontSize, widget.maxFontSize);
       var defaultScale = defaultFontSize * userScale / style.fontSize;
       if (_checkTextFits(span, defaultScale, maxLines, size)) {
         return [defaultFontSize, true];
@@ -452,6 +452,7 @@ class _AutoSizeTextState extends State<AutoSizeText> {
     super.dispose();
   }
 }
+
 /// Controller to synchronize the fontSize of multiple AutoSizeTexts.
 class AutoSizeGroup {
   var _listeners = Map<_AutoSizeTextState, double>();

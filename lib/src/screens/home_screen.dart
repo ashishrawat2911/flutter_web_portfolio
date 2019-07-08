@@ -1,7 +1,9 @@
 import 'package:flutter_web/material.dart';
 import 'package:flutter_web_portfolio/blocs/navigation_bloc.dart';
 import 'package:flutter_web_portfolio/src/screens/menu_section.dart';
+import 'package:flutter_web_portfolio/src/screens/personal_projects.dart';
 import 'package:flutter_web_portfolio/src/screens/profile_screen.dart';
+import 'package:flutter_web_portfolio/src/screens/talks_screen.dart';
 
 import 'blog_screen.dart';
 
@@ -17,8 +19,19 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-
-      appBar: isSmallScreen(context) ? AppBar() : null,
+      appBar: isSmallScreen(context)
+          ? AppBar(
+              title: StreamBuilder<NavigationScreen>(
+                  stream: navigationDrawerBloc.getNavigation,
+                  initialData:
+                      navigationDrawerBloc.navigationProvider.currentNavigation,
+                  builder: (context, snapshot) {
+                    return Text(snapshot.data
+                        .toString()
+                        .replaceAll(RegExp('NavigationScreen.'), ''));
+                  }),
+            )
+          : null,
       drawer: isSmallScreen(context)
           ? Drawer(
               child: MenuSection(_scaffoldKey),
@@ -54,6 +67,10 @@ class _HomeState extends State<Home> {
             return ProfileSection();
           } else if (snapshot.data == NavigationScreen.Blog) {
             return Blogs();
+          } else if (snapshot.data == NavigationScreen.Talks) {
+            return TalksScreen();
+          } else if (snapshot.data == NavigationScreen.PersonalProject) {
+            return PersonalProjects();
           } else {
             return ProfileSection();
           }

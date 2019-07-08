@@ -18,7 +18,7 @@ class NavigationDrawerBloc {
 
 NavigationDrawerBloc navigationDrawerBloc = NavigationDrawerBloc();
 enum NavigationScreen {
-  Profile,Blog,
+  Profile,Blog,Talks,PersonalProject
 }
 
 class NavigationProvider {
