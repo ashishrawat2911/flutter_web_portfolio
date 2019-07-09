@@ -46,7 +46,7 @@ class _PersonalProjectsState extends State<PersonalProjects> {
               shrinkWrap: true,
               crossAxisCount: displaySize.width < 1200 ? 2 : 3,
               crossAxisSpacing: 10,
-              childAspectRatio: 1,
+              childAspectRatio:isSmallScreen(context)?0.9: 1.3,
               padding: EdgeInsets.all(5),
               children: <Widget>[
                 ...List<Widget>.generate(blogList.length, (int index) {
@@ -66,9 +66,9 @@ class _PersonalProjectsState extends State<PersonalProjects> {
                               width: displaySize.width / 2,
                               child: AutoSizeText(
                                 blogList[index].name,
-                                maxLines: 2,
+                                maxLines: 1,
                                 overflow: TextOverflow.clip,
-                                style: TextStyle(fontSize: 20),
+                                style: TextStyle(fontSize: 30),
                               ),
                             ),
                             Image.network(blogList[index].image),

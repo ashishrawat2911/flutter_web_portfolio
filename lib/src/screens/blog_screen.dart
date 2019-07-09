@@ -44,7 +44,7 @@ class _BlogsState extends State<Blogs> {
             shrinkWrap: true,
             crossAxisCount: displaySize.width < 1200 ? 2 : 3,
             crossAxisSpacing: 10,
-            childAspectRatio: 1.3,
+            childAspectRatio:isSmallScreen(context)?1: 1.3,
             padding: EdgeInsets.all(5),
             children: <Widget>[
               ...List<Widget>.generate(blogList.length, (int index) {

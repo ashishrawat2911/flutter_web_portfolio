@@ -44,7 +44,7 @@ class _TalksScreenState extends State<TalksScreen> {
               shrinkWrap: true,
               crossAxisCount: displaySize.width < 1200 ? 2 : 3,
               crossAxisSpacing: 10,
-              childAspectRatio: 1,
+              childAspectRatio: isSmallScreen(context)?0.9: 1.2,
               padding: EdgeInsets.all(5),
               children: <Widget>[
                 ...List<Widget>.generate(blogList.length, (int index) {
@@ -59,8 +59,8 @@ class _TalksScreenState extends State<TalksScreen> {
                             width: displaySize.width / 2,
                             child: AutoSizeText(
                               blogList[index].topic,
-                              maxLines: 2,
-                              overflow: TextOverflow.clip,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(fontSize: 20),
                             ),
                           ),
@@ -68,16 +68,16 @@ class _TalksScreenState extends State<TalksScreen> {
                             width: displaySize.width / 2,
                             child: AutoSizeText(
                               "at",
-                              maxLines: 2,
+
                               overflow: TextOverflow.clip,
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 15),
                             ),
                           ),
                           Container(
                             width: displaySize.width / 2,
                             child: AutoSizeText(
                               blogList[index].name,
-                              maxLines: 2,
+                              maxLines: 1,
                               overflow: TextOverflow.clip,
                               style: TextStyle(fontSize: 20),
                             ),

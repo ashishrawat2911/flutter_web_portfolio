@@ -111,7 +111,7 @@ class _ProfileSectionState extends State<ProfileSection> {
                     physics: NeverScrollableScrollPhysics(),
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 5,
-                    childAspectRatio: 2,
+                    childAspectRatio: 3,
                     padding: EdgeInsets.all(5),
                     children: <Widget>[
                       socialProfile(
