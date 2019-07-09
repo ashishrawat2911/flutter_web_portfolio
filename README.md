@@ -4,13 +4,13 @@ This a web portfolio built in flutter, Check out now at https://ashishrawat2911.
 # Screenshots
 
 ## Profile
-<img src="https://raw.githubusercontent.com/ashishrawat2911/flutter_web_portfolio/master/screenshots/profile.png?token=AHZSZETBT77D3NZL5ZD7BNK5EQE6E" >
+<img src="https://raw.githubusercontent.com/ashishrawat2911/flutter_web_portfolio/master/screenshots/profile.png" >
 
 ## Blog
-<img src="https://raw.githubusercontent.com/ashishrawat2911/flutter_web_portfolio/master/screenshots/blog.png?token=AHZSZEWIM7QVJNFJPSNYRYC5EQELC" >
+<img src="https://raw.githubusercontent.com/ashishrawat2911/flutter_web_portfolio/master/screenshots/blog.png" >
 
 # Profile_Small_Screen
-<img src="https://raw.githubusercontent.com/ashishrawat2911/flutter_web_portfolio/master/screenshots/profilesmall.png?token=AHZSZEQFWNIIG7XNFSG2WT25EQEQU">
+<img src="https://raw.githubusercontent.com/ashishrawat2911/flutter_web_portfolio/master/screenshots/profilesmall.png">
 
 # Blog_Small_Screen
-<img src ="https://raw.githubusercontent.com/ashishrawat2911/flutter_web_portfolio/master/screenshots/blogsmall.png?token=AHZSZEQLAPY3HOEXVKBL3IC5EQEUG">
+<img src ="https://raw.githubusercontent.com/ashishrawat2911/flutter_web_portfolio/master/screenshots/blogsmall.png">
