@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ashish Rawat',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: "GoogleSans"),
+      theme: ThemeData(primarySwatch: Colors.black, fontFamily: "GoogleSans"),
       home: Home(),
     );
   }
